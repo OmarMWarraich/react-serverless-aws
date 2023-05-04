@@ -1,9 +1,49 @@
-import React from 'react';
-import servicesData from '../data/services.json';
-import accessibilitiesData from '../data/accessibilities.json';
-import arrivalData from '../data/arrival.json';
+import React, {useEffect, useState} from 'react';
 
 const HotelInfo = () => {
+  const [accessibilitiesData, setAccessibilitiesData] = useState([]);
+  const [servicesData, setServicesData] = useState([]);
+  const [arrivalData, setArrivalData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://awcoduj2y9.execute-api.us-east-1.amazonaws.com/Production/accessibilities")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setAccessibilitiesData(result);
+        },
+        (error) => {
+          console.log(error);
+        }
+      )
+  }, [])
+
+  useEffect(() => {
+    fetch("https://awcoduj2y9.execute-api.us-east-1.amazonaws.com/Production/services")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setServicesData(result);
+        },
+        (error) => {
+          console.log(error);
+        }
+      )
+  }, [])
+
+  useEffect(() => {
+    fetch("https://awcoduj2y9.execute-api.us-east-1.amazonaws.com/Production/arrivals")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setArrivalData(result);
+        },
+        (error) => {
+          console.log(error);
+        }
+      )
+  }, [])
+
   return (
     <div className="scene" id="hotelinfo">
         <article className="heading">
