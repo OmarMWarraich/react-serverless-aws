@@ -100,7 +100,7 @@ Landon Hotel is a React application that provides details about the hotel, its r
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://main.d1vbsuquswkqgf.amplifyapp.com/)
+- [Live Demo Link](https://main.d2e4zypnjcy2vm.amplifyapp.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
