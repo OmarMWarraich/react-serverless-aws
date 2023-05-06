@@ -116,7 +116,7 @@ In order to run this project you need:
 
 
 ```sh
- gem install rails
+ npm i
 ```
 
 ### Setup
